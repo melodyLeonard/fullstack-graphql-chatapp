@@ -1,0 +1,151 @@
+$blue: #0099ff;
+$green: #42b72a;
+$paragrap-margin-bottom: 0;
+$font-family-base: 'Metropolis', sans-serif;
+$gray-600: #e4e6eb;
+
+@import '~bootstrap/scss/bootstrap';
+
+.app-container {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar-container {
+  height: 100vh;
+  width: 100%;
+  padding: 0 0.5rem 0 1.5rem;
+  margin: 0;
+  background-color: #f8f9fa;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.user-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  &:hover {
+    background-color: rgba(206, 203, 203, 0.502);
+  }
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 90vh;
+  padding: 0 1rem;
+}
+
+.messages-box {
+  padding: 2rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.message-input {
+  background: $gray-600;
+  &::placeholder {
+    padding: 0 1rem;
+    color: rgba(20, 20, 20, 0.5);
+  }
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message-bubble {
+  padding: 0.3rem 1.2rem;
+  border-radius: 1.5rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.received-message {
+  background: #f5f5f5;
+  border-bottom-left-radius: 0 !important;
+
+  .chat-date {
+    font-size: 0.75rem;
+    color: #999b9c;
+  }
+}
+
+.sent-message {
+  background: $blue;
+  border-bottom-right-radius: 0 !important;
+
+  .chat-date {
+    font-size: 0.75rem;
+    color: #dcdfe2;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.info-text {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.search-bar-container {
+  padding: 0.2rem 0.5rem 0 5.6rem;
+}
+
+.chat-date {
+  font-size: 0.75rem;
+  color: #a3a6a9;
+}
+.reaction-icon {
+  color: rgb(120, 122, 122);
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.react-button-popover {
+  height: 40px;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  // background: none;
+}
+
+.reaction-icon-button {
+  padding: 0 0.25rem;
+  font-size: 1rem;
+  transition: 0.2s;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
